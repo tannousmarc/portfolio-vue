@@ -27,5 +27,6 @@ export default {
 }
 body{
   margin: 0px;
+  overflow-y: scroll;
 }
 </style>

@@ -21,9 +21,4 @@ export default {
 </script>
 
 <style scoped>
-  h1{
-    margin: 0;
-    -webkit-margin-before: 0;
-    -webkit-margin-after: 0;
-  }
 </style>
