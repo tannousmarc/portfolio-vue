@@ -5,9 +5,13 @@
   </span>
   <span id = "about-right">
     <p>
-      I'm Marc Tannous, 2015 Google Grand Prize Winner, currently studying for a Master of Engineering Degree in Computer Sciences.<br />
+      I'm Marc Tannous, 2015 Google Grand Prize Winner, currently studying for a
+      <a href = "http://www.bristol.ac.uk/study/undergraduate/2018/computer-science/meng-comp-sci/">
+      Master of Engineering Degree in Computer Science
+      </a>.<br />
       I'm currently based in Bristol, UK and available for remote work.<br />
-      Here's a list of selected projects that I've been hired to work on in the past few years. More work is available on request.<br />
+      Here's a <router-link to = "projects">list of selected projects</router-link>
+      that I've been hired to work on in the past few years. More work is available on request.<br />
     </p>
   </span>
 </div>
@@ -52,5 +56,19 @@ export default {
     color: #737373;
     font-size: 1.1em;
     line-height: 1.8em;
+  }
+  #about-right *{
+    transition: all 0.1s ease-in-out;
+  }
+  #about-right a{
+    background-color: rgba(231, 76, 60, 0.4);
+    text-decoration: none;
+    color: #222;
+    padding: 0.15em 0.3em;
+  }
+  #about-right a:hover{
+    cursor: pointer;
+    cursor: hand;
+    border-bottom: 4px solid #e74c3c;
   }
 </style>
