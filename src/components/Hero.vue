@@ -10,8 +10,8 @@ export default {
   name: 'Hero',
   data () {
     return {
-      title: "I'm Marc. I design and develop fun stuff.",
-      subtitle: "Still looking for a cool job title."
+      title: 'I\'m Marc. I design and build fun stuff.',
+      subtitle: 'Still looking for a cool job title.'
     }
   }
 }
@@ -22,7 +22,6 @@ export default {
   width: 100%;
   background-color: #e74c3c;
   padding: 15em 0;
-  position: absolute;
   top: 0;
   z-index: 0;
   color: #fefefe;

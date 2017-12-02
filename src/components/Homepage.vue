@@ -1,13 +1,17 @@
 
 <template>
+<div id = "homepage">
   <Hero />
+  <About />
+</div>
 </template>
 
 <script>
 import Hero from './Hero'
+import About from './About'
 export default {
   name: 'Homepage',
-  components: {Hero},
+  components: {Hero, About},
   data () {
     return {
       msg: 'muie la gabori'
