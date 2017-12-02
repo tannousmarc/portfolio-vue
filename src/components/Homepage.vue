@@ -1,13 +1,13 @@
 
 <template>
-<div class="hello">
-<h1>{{ msg }}</h1>
-</div>
+  <Hero />
 </template>
 
 <script>
+import Hero from './Hero'
 export default {
   name: 'Homepage',
+  components: {Hero},
   data () {
     return {
       msg: 'muie la gabori'

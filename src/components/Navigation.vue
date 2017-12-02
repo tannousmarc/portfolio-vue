@@ -27,13 +27,16 @@ export default {
     transition: all 0.35s;
   }
   #nav-bar{
+    position: fixed;
+    top: 0px;
+    z-index: 999;
     width: 100%;
     background-color: #e74c3c;
     margin: 0em;
     padding: 1em 0em;
   }
   #nav-bar #nav-container{
-    margin: 0em 25em;
+    margin: 0em 30em;
   }
   #nav-bar #nav-container .element{
     width: 20%;
@@ -42,7 +45,8 @@ export default {
     margin: 0;
     pading: 0;
     vertical-align: middle;
-    font-size: 0.9em;
+    font-size: 1.1em;
+    font-weight: 500;
   }
   #nav-bar #nav-container .element a{
     color: #fefefe;

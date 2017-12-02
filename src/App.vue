@@ -16,11 +16,10 @@ export default {
 
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700|Roboto:100,300,400,500,700,900');
 #app {
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  font-size: 1.2em;
   -webkit-font-smoothing: antialiased;
   text-align: center;
   color: #2c3e50;
