@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'TheAboutSection',
   data () {
     return {
     }
@@ -29,7 +29,7 @@ export default {
 
 <style scoped>
   #about{
-    margin:0 25em;
+    margin:0 20%;
     backgorund-color: #fefefe;
     padding: 5em 0;
     white-space: nowrap;
@@ -61,7 +61,7 @@ export default {
     transition: all 0.1s ease-in-out;
   }
   #about-right a{
-    background-color: rgba(231, 76, 60, 0.4);
+    background-color: rgba(255, 89, 100, 0.4);
     text-decoration: none;
     color: #222;
     padding: 0.15em 0.3em;
@@ -69,6 +69,6 @@ export default {
   #about-right a:hover{
     cursor: pointer;
     cursor: hand;
-    border-bottom: 4px solid #e74c3c;
+    border-bottom: 4px solid #FF5964;
   }
 </style>

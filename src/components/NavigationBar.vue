@@ -1,10 +1,10 @@
 <template>
 <nav id = "nav-bar">
   <div id = "nav-container">
-    <span v-for = "item in items" class = "element">
-    <img v-if = "item === 'Logo'" src = "../assets/logo.png" />
-    <router-link :to="item" v-else>
-      {{item}}
+    <span v-for = "item in items" :key = "item.id" class = "element">
+    <img v-if = "item.name === 'Logo'" src = "../assets/logo.png" />
+    <router-link :to="item.link" v-else>
+      {{item.name}}
     </router-link>
     </span>
   </div>
@@ -13,10 +13,36 @@
 
 <script>
 export default {
-  name: 'Navigation',
+  name: 'NavigationBar',
   data () {
     return {
-      items: ['home', 'projects', 'Logo', 'playground', 'contact']
+      items: [
+        {
+          id: 1,
+          name: 'home',
+          link: 'home'
+        },
+        {
+          id: 2,
+          name: 'projects',
+          link: 'projects'
+        },
+        {
+          id: 3,
+          name: 'Logo',
+          link: ''
+        },
+        {
+          id: 4,
+          name: 'playground',
+          link: 'playground'
+        },
+        {
+          id: 5,
+          name: 'contact',
+          link: 'contact'
+        }
+      ]
     }
   }
 }
@@ -31,12 +57,12 @@ export default {
     top: 0px;
     z-index: 999;
     width: 100%;
-    background-color: #e74c3c;
+    background-color: #FF5964;
     margin: 0em;
     padding: 1em 0em;
   }
   #nav-bar #nav-container{
-    margin: 0em 30em;
+    margin: 0em 25%;
   }
   #nav-bar #nav-container .element{
     width: 20%;

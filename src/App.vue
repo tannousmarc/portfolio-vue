@@ -1,14 +1,14 @@
 <script>
-import Navigation from './components/Navigation'
+import NavigationBar from './components/NavigationBar'
 export default {
   name: 'app',
-  components: {Navigation}
+  components: {NavigationBar}
 }
 </script>
 
 <template>
 <div id="app">
-  <Navigation></Navigation>
+  <NavigationBar/>
   <router-view/>
 </div>
 </template>

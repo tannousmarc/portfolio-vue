@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'Hero',
+  name: 'TheHeroSection',
   data () {
     return {
       title: 'I\'m Marc. I design and build fun stuff.',
@@ -20,7 +20,7 @@ export default {
 <style scoped>
 #hero{
   width: 100%;
-  background-color: #e74c3c;
+  background-color: #FF5964;
   padding: 15em 0;
   top: 0;
   z-index: 0;
