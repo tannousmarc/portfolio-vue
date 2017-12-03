@@ -95,6 +95,9 @@ export default {
   .scroll #nav-container .element a{
     color: #222 !important;
   }
+  .scroll #nav-container .element a:hover{
+    color: #FF5964 !important;
+  }
   .scroll #nav-container{
     margin: 0em 20% !important;
   }
