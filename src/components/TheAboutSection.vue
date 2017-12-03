@@ -41,7 +41,9 @@ export default {
     white-space: normal;
   }
   #about-left img{
-    border-radius: 50%;
+    // hand-generated octagon clipping path
+    clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
+    -webkit-clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
   }
   #about-right{
     white-space: normal;
