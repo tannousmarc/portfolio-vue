@@ -3,6 +3,7 @@
   <div class = "homepage-project" v-for = "project in projects" :key = "project.id" v-bind:style = "{ backgroundImage: 'url(' + project.cover + ')' }">
     <div class = "text-container">
       <h1>{{project.title}}</h1>
+      <BaseTag v-for = "tag in project.tags" :key = "tag.id" :text = "tag.text" /><br />
       <pre>{{project.description}}</pre>
       <BaseButton :url = "project.studyUrl" text = "Case Study" />
       <BaseButton :url = "project.url" text = "Check it out" />
@@ -13,19 +14,33 @@
 
 <script>
 import BaseButton from './BaseButton'
+import BaseTag from './BaseTag'
 export default {
   name: 'TheProjectsSection',
-  components: {BaseButton},
+  components: {BaseButton, BaseTag},
   data () {
     return {
       projects: [
         {
           id: 1,
           title: 'Esportsify',
+          tags: [
+            {
+              id: 1,
+              text: 'JS'
+            },
+            {
+              id: 2,
+              text: 'PHP'
+            },
+            {
+              id: 3,
+              text: 'UX'
+            }
+          ],
           description: `Various Web Applications in the eSports industry.
 Most of my work contributed to Ryze, a streaming platform that
 aimed to provide the complete experience for eSports fans.`,
-          tags: [],
           cover: require('../assets/esportsify-cover.jpg'),
           url: 'http://www.esportsify.com',
           studyUrl: '/project/esportsify'
@@ -36,7 +51,16 @@ aimed to provide the complete experience for eSports fans.`,
           description: `FDIN is the community for successful innovation professionals.
 Their website now serves as the go-to place for innovation job vacancies
 and career development within the UK food and drink industry.`,
-          tags: [],
+          tags: [
+            {
+              id: 1,
+              text: 'UX'
+            },
+            {
+              id: 2,
+              text: 'Mobile'
+            }
+          ],
           cover: require('../assets/fdin-cover.jpg'),
           url: 'http://www.fdin.co.uk',
           studyUrl: '/project/fdin'
@@ -48,7 +72,20 @@ and career development within the UK food and drink industry.`,
 video games, as well as TV series and movies.
 I was in charge of coordinating a team that handled local and online
 marketing, web design and development, stream design and implemenation.`,
-          tags: [],
+          tags: [
+            {
+              id: 1,
+              text: 'Print'
+            },
+            {
+              id: 2,
+              text: 'Marketing'
+            },
+            {
+              id: 3,
+              text: 'UX'
+            }
+          ],
           cover: require('../assets/eecc-cover.jpg'),
           url: 'http://www.eecc.com',
           studyUrl: '/project/eecc'
@@ -79,6 +116,7 @@ marketing, web design and development, stream design and implemenation.`,
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
     font-size: 1.1em;
+    margin-top: 1em;
   }
   .homepage-project .text-container{
     position: absolute;
