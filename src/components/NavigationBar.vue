@@ -88,6 +88,7 @@ export default {
   }
   .scroll{
     background-color: rgba(255,255,255, 0.9) !important;
+    border-bottom: 1px solid gainsboro;
   }
   .scroll #nav-container .element{
     font-size: 0.9em !important;
