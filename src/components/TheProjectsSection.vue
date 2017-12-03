@@ -4,14 +4,18 @@
     <div class = "text-container">
       <h1>{{project.title}}</h1>
       <pre>{{project.description}}</pre>
+      <BaseButton :url = "project.studyUrl" text = "Case Study" />
+      <BaseButton :url = "project.url" text = "Check it out" />
     </div>
   </div>
 </div>
 </template>
 
 <script>
+import BaseButton from './BaseButton'
 export default {
   name: 'TheProjectsSection',
+  components: {BaseButton},
   data () {
     return {
       projects: [
@@ -22,7 +26,9 @@ export default {
 Most of my work contributed to Ryze, a streaming platform that
 aimed to provide the complete experience for eSports fans.`,
           tags: [],
-          cover: require('../assets/esportsify-cover.jpg')
+          cover: require('../assets/esportsify-cover.jpg'),
+          url: 'http://www.esportsify.com',
+          studyUrl: '/project/esportsify'
         },
         {
           id: 2,
@@ -31,7 +37,9 @@ aimed to provide the complete experience for eSports fans.`,
 Their website now serves as the go-to place for innovation job vacancies
 and career development within the UK food and drink industry.`,
           tags: [],
-          cover: require('../assets/fdin-cover.jpg')
+          cover: require('../assets/fdin-cover.jpg'),
+          url: 'http://www.fdin.co.uk',
+          studyUrl: '/project/fdin'
         },
         {
           id: 3,
@@ -41,7 +49,9 @@ video games, as well as TV series and movies.
 I was in charge of coordinating a team that handled local and online
 marketing, web design and development, stream design and implemenation.`,
           tags: [],
-          cover: require('../assets/eecc-cover.jpg')
+          cover: require('../assets/eecc-cover.jpg'),
+          url: 'http://www.eecc.com',
+          studyUrl: '/project/eecc'
         }
       ]
     }
@@ -79,5 +89,4 @@ marketing, web design and development, stream design and implemenation.`,
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
   }
-
 </style>

@@ -21,7 +21,7 @@ export default {
         {
           id: 1,
           name: 'home',
-          link: 'home'
+          link: './home'
         },
         {
           id: 2,
@@ -63,7 +63,6 @@ export default {
       }
     },
     handleScroll () {
-      console.log('called')
       this.scrolled = window.scrollY > 0
     }
   },

@@ -14,6 +14,10 @@ export default new Router({
     {
       path: '/home',
       redirect: '/'
+    },
+    {
+      path: '/project/home',
+      redirect: '/'
     }
   ]
 })
