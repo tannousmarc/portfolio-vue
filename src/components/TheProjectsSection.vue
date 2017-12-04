@@ -47,6 +47,31 @@ summarized, visualized, and analyzed with ease.`,
         },
         {
           id: 1,
+          title: 'East European Comic-Con',
+          description: `EECC is East Europe's most important event dedicated to fans of comics,
+video games, as well as TV series and movies.
+I was in charge of coordinating a team that handled local and online
+marketing, web design and development, stream design and implemenation.`,
+          tags: [
+            {
+              id: 1,
+              text: 'Print'
+            },
+            {
+              id: 2,
+              text: 'Marketing'
+            },
+            {
+              id: 3,
+              text: 'UX'
+            }
+          ],
+          cover: require('../assets/eecc-cover.jpg'),
+          url: 'http://www.eecc.com',
+          studyUrl: '/project/eecc'
+        },
+        {
+          id: 2,
           title: 'Esportsify',
           tags: [
             {
@@ -70,7 +95,7 @@ aimed to provide the complete experience for eSports fans.`,
           studyUrl: '/project/esportsify'
         },
         {
-          id: 2,
+          id: 3,
           title: 'Food & Drink Innovation Network',
           description: `FDIN is the community for successful innovation professionals.
 Their website now serves as the go-to place for innovation job vacancies
@@ -88,31 +113,6 @@ and career development within the UK food and drink industry.`,
           cover: require('../assets/fdin-cover.jpg'),
           url: 'http://www.fdin.co.uk',
           studyUrl: '/project/fdin'
-        },
-        {
-          id: 3,
-          title: 'East European Comic-Con',
-          description: `EECC is East Europe's most important event dedicated to fans of comics,
-video games, as well as TV series and movies.
-I was in charge of coordinating a team that handled local and online
-marketing, web design and development, stream design and implemenation.`,
-          tags: [
-            {
-              id: 1,
-              text: 'Print'
-            },
-            {
-              id: 2,
-              text: 'Marketing'
-            },
-            {
-              id: 3,
-              text: 'UX'
-            }
-          ],
-          cover: require('../assets/eecc-cover.jpg'),
-          url: 'http://www.eecc.com',
-          studyUrl: '/project/eecc'
         }
       ]
     }
