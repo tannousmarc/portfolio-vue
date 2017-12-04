@@ -1,17 +1,15 @@
 <template>
 <div id = "about">
-  <span id = "about-left">
-    <img src = "../assets/profile.jpg" />
-  </span>
+<!--  <span id = "about-left">
+        <img src = "../assets/profile.jpg" />
+      </span> -->
   <span id = "about-right">
+    <h1>Hi.</h1>
     <p>
-      I'm Marc Tannous, 2015 Google Grand Prize Winner, currently studying for a
-      <a href = "http://www.bristol.ac.uk/study/undergraduate/2018/computer-science/meng-comp-sci/">
-      Master of Engineering Degree in Computer Science
-      </a>.<br />
-      I'm currently based in Bristol, UK and available for remote work.<br />
+      I'm Marc Tannous. I like to brag about being a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.<br/>
+      I'm currently a Technology Analyst Intern at J.P.Morgan Chase.<br /> I'll be available for new adventures in September '18.<br />
       Here's a <router-link to = "projects">list of selected projects</router-link>
-      that I've been hired to work on in the past few years. More work is available on request.<br />
+      that I've been hired to work on in the past few years.
     </p>
   </span>
 </div>
@@ -29,12 +27,12 @@ export default {
 
 <style scoped>
   #about{
-    margin:0 20%;
     backgorund-color: #fefefe;
     padding: 5em 0;
     white-space: nowrap;
+
   }
-  #about-left{
+  /*#about-left{
     display: inline-block;
     width: 45%;
     vertical-align: middle;
@@ -44,13 +42,17 @@ export default {
     // hand-generated octagon clipping path
     clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
     -webkit-clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
-  }
+  }*/
   #about-right{
     white-space: normal;
     display: inline-block;
-    width: 55%;
     text-align: left;
     vertical-align: middle;
+    margin: 0 auto;
+  }
+  #about-right h1{
+    margin: 0;
+    padding: 0;
   }
   #about-right p{
     font-family: 'Work Sans', sans-serif;

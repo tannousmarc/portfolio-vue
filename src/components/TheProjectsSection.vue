@@ -50,8 +50,8 @@ summarized, visualized, and analyzed with ease.`,
           title: 'East European Comic-Con',
           description: `EECC is East Europe's most important event dedicated to fans of comics,
 video games, as well as TV series and movies.
-I was in charge of coordinating a team that handled local and online
-marketing, web design and development, stream design and implemenation.`,
+I was in charge of coordinating the team that handled local and online
+marketing, web design and development as well as online live broadcasting.`,
           tags: [
             {
               id: 1,

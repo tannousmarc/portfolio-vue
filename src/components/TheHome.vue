@@ -11,9 +11,10 @@
 import TheHeroSection from './TheHeroSection'
 import TheAboutSection from './TheAboutSection'
 import TheProjectsSection from './TheProjectsSection'
+import BaseButton from './BaseButton'
 export default {
   name: 'TheHome',
-  components: {TheHeroSection, TheAboutSection, TheProjectsSection},
+  components: {TheHeroSection, TheAboutSection, TheProjectsSection, BaseButton},
   data () {
     return {
 
