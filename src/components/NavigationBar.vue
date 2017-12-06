@@ -1,3 +1,4 @@
+//
 <template>
 <nav id = "nav-bar" v-bind:class="{ scroll: scrolled }">
   <div id = "nav-container">
