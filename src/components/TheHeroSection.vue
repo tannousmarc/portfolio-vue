@@ -30,10 +30,14 @@ h1{
   font-weight: 300;
   font-size: 3.5em;
   margin: 0;
+  color: #fcfcfc;
+  text-shadow : 0 1px 2px rgba(0,0,0,0.10);
 }
 h2{
   font-weight: 200;
   font-size: 2em;
   margin: 0;
+  color: #fcfcfc;
+  text-shadow : 0 1px 2px rgba(0,0,0,0.15);
 }
 </style>

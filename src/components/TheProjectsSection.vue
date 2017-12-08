@@ -23,6 +23,29 @@ export default {
       projects: [
         {
           id: 0,
+          title: 'University of Bristol',
+          description: `Built application that clients, students, and lecturers use to manage their
+respective projects from the Software Product Engineering unit.`,
+          tags: [
+            {
+              id: 1,
+              text: 'Vue.js'
+            },
+            {
+              id: 2,
+              text: 'Java'
+            },
+            {
+              id: 3,
+              text: 'UX'
+            }
+          ],
+          cover: require('../assets/uob-cover.jpg'),
+          url: ' ',
+          studyUrl: '/project/bristolSPE'
+        },
+        {
+          id: 1,
           title: 'Alces',
           tags: [
             {
@@ -46,7 +69,7 @@ summarized, visualized, and analyzed with ease.`,
           studyUrl: '/project/esportsify'
         },
         {
-          id: 1,
+          id: 2,
           title: 'East European Comic-Con',
           description: `EECC is East Europe's most important event dedicated to fans of comics,
 video games, as well as TV series and movies.
@@ -60,10 +83,6 @@ marketing, web design and development as well as online live broadcasting.`,
             {
               id: 2,
               text: 'Marketing'
-            },
-            {
-              id: 3,
-              text: 'UX'
             }
           ],
           cover: require('../assets/eecc-cover.jpg'),
@@ -71,7 +90,7 @@ marketing, web design and development as well as online live broadcasting.`,
           studyUrl: '/project/eecc'
         },
         {
-          id: 2,
+          id: 3,
           title: 'Esportsify',
           tags: [
             {
@@ -93,26 +112,6 @@ aimed to provide the complete experience for eSports fans.`,
           cover: require('../assets/esportsify-cover.jpg'),
           url: 'http://www.esportsify.com',
           studyUrl: '/project/esportsify'
-        },
-        {
-          id: 3,
-          title: 'Food & Drink Innovation Network',
-          description: `FDIN is the community for successful innovation professionals.
-Their website now serves as the go-to place for innovation job vacancies
-and career development within the UK food and drink industry.`,
-          tags: [
-            {
-              id: 1,
-              text: 'UX'
-            },
-            {
-              id: 2,
-              text: 'Mobile'
-            }
-          ],
-          cover: require('../assets/fdin-cover.jpg'),
-          url: 'http://www.fdin.co.uk',
-          studyUrl: '/project/fdin'
         }
       ]
     }
@@ -135,6 +134,7 @@ and career development within the UK food and drink industry.`,
   .homepage-project h1{
     font-size: 2em;
     font-weight: 400;
+    text-shadow : 0 3px 4px rgba(0,0,0,0.40);
   }
   .homepage-project pre{
     font-family: "Work Sans", sans-serif;
