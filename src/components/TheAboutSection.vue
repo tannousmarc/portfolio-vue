@@ -9,7 +9,7 @@
       I'm Marc Tannous. I like to brag about being a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.<br/>
       I'm currently a Technology Analyst Intern at J.P.Morgan Chase.<br /> I'll be available for new adventures in September '18.<br />
       Here's a <router-link to = "projects">list of selected projects</router-link>
-      that I've been hired to work on in the past few years.
+      that I've been hired to work on over the past few years.
     </p>
   </span>
 </div>

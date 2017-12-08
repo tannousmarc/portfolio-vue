@@ -4,17 +4,19 @@
   <TheHeroSection />
   <TheAboutSection />
   <TheProjectsSection />
+  <TheCTASection />
 </div>
 </template>
 
 <script>
-import TheHeroSection from './TheHeroSection'
-import TheAboutSection from './TheAboutSection'
-import TheProjectsSection from './TheProjectsSection'
-import BaseButton from './BaseButton'
+import TheCTASection from './TheCTASection.vue'
+import TheHeroSection from './TheHeroSection.vue'
+import TheAboutSection from './TheAboutSection.vue'
+import TheProjectsSection from './TheProjectsSection.vue'
+import BaseButton from './BaseButton.vue'
 export default {
   name: 'TheHome',
-  components: {TheHeroSection, TheAboutSection, TheProjectsSection, BaseButton},
+  components: {TheHeroSection, TheAboutSection, TheProjectsSection, BaseButton, TheCTASection},
   data () {
     return {
 

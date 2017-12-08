@@ -40,7 +40,6 @@ export default {
     border: 2px solid #fefefe;
     padding: 1em 2em;
     font-size: 1em;
-    float: left;
     margin-right: 0.5em;
     margin-top: 1em;
     transition: all 0.25s ease;
@@ -52,5 +51,16 @@ export default {
     cursor: hand;
     background-color: #FF5964;
     border-color: #FF5964;
+  }
+  .black button{
+    border-color: #222;
+    color: #222;
+    padding: 1em 2em;
+    margin: 4em 0;
+    width: 300px;
+  }
+  .black button:hover{
+    border-color: #FF5964;
+    color: #fefefe;
   }
 </style>

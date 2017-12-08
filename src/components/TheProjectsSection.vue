@@ -29,14 +29,18 @@ respective projects from the Software Product Engineering unit.`,
           tags: [
             {
               id: 1,
-              text: 'Vue.js'
+              text: 'JS'
             },
             {
               id: 2,
-              text: 'Java'
+              text: 'Vue.js'
             },
             {
               id: 3,
+              text: 'Java'
+            },
+            {
+              id: 4,
               text: 'UX'
             }
           ],
@@ -140,7 +144,7 @@ aimed to provide the complete experience for eSports fans.`,
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
     font-size: 1.1em;
-    margin-top: 1em;
+    margin-top: 1.2em;
   }
   .homepage-project .text-container{
     position: absolute;
@@ -150,5 +154,8 @@ aimed to provide the complete experience for eSports fans.`,
     -ms-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
+  }
+  .text-container a{
+    float: left;
   }
 </style>
