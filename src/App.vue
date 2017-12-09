@@ -1,8 +1,9 @@
 <script>
 import NavigationBar from './components/NavigationBar'
+import FooterSection from './components/FooterSection'
 export default {
   name: 'app',
-  components: {NavigationBar}
+  components: {NavigationBar, FooterSection}
 }
 </script>
 
@@ -10,6 +11,7 @@ export default {
 <div id="app">
   <NavigationBar/>
   <router-view/>
+  <FooterSection />
 </div>
 </template>
 

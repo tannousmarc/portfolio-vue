@@ -63,4 +63,16 @@ export default {
     border-color: #FF5964;
     color: #fefefe;
   }
+  .white button{
+    border-color: #fefefe;
+    color: #fefefe;
+    padding: 1em 2em;
+    margin: 0;
+    width: 300px;
+  }
+  .white button:hover{
+    border-color: #fefefe;
+    background-color: #fefefe;
+    color: #FF5964;
+  }
 </style>
