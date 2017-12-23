@@ -3,15 +3,35 @@ import NavigationBar from './components/NavigationBar'
 import FooterSection from './components/FooterSection'
 export default {
   name: 'app',
-  components: {NavigationBar, FooterSection}
+  components: {NavigationBar, FooterSection},
+  data () {
+    return {
+      loaded: false
+    }
+  },
+  methods: {
+    loadFooter: function (id) {
+      let self = this
+      if (id === 1) {
+        // Account for fading in animation
+        setTimeout(function () {
+          console.log('DUPA')
+          self.loaded = true
+        }, 300)
+      } else {
+        // navigated away, unload footer to re-calculate bottom
+        this.loaded = false
+      }
+    }
+  }
 }
 </script>
 
 <template>
 <div id="app">
   <NavigationBar/>
-  <router-view/>
-  <FooterSection />
+  <router-view v-on:loaded = "loadFooter" />
+  <FooterSection v-if = "loaded" />
 </div>
 </template>
 
@@ -30,5 +50,7 @@ export default {
 body{
   margin: 0px;
   overflow-y: scroll;
+  background-color: #FF5964;
 }
+
 </style>

@@ -28,6 +28,7 @@ export default {
     color: #fefefe;
     padding: 2em 0 5em;
     position: relative;
+    float: bottom;
   }
   #footer img {
     transition: all 0.2s ease;

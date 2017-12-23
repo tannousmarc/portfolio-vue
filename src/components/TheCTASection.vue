@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style scoped>
+  #call-to-action{
+    background-color: #FEFEFE;
+  }
   #call-to-action a{
     margin: 0 auto;
   }

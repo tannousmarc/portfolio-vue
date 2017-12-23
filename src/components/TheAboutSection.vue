@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
   #about{
-    backgorund-color: #fefefe;
+    background-color: #fefefe;
     padding: 5em 0;
     white-space: nowrap;
 

@@ -5,26 +5,26 @@
 <BaseLoader />
 </div>
 <div v-else key="loaded">
-<div id = "homepage">
-<TheHeroSection />
-<TheAboutSection />
-<TheProjectsSection />
-<TheCTASection />
+<div id = "projectspage">
+  <div class="grid" style = "padding-top: 10em">
+    <div class="grid-item">muie</div>
+    <div class="grid-item grid-item--width2">tie</div>
+    <div class="grid-item">muie si mie</div>
+    <div class="grid-item">muie</div>
+    <div class="grid-item grid-item--width2">tie</div>
+    <div class="grid-item">muie si mie</div>
+  </div>
 </div>
 </div>
 </transition>
 </template>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 <script>
-import TheCTASection from './TheCTASection.vue'
-import TheHeroSection from './TheHeroSection.vue'
-import TheAboutSection from './TheAboutSection.vue'
-import TheProjectsSection from './TheProjectsSection.vue'
-import BaseButton from './BaseButton.vue'
 import BaseLoader from './BaseLoader.vue'
 export default {
-  name: 'TheHome',
-  components: {TheHeroSection, TheAboutSection, TheProjectsSection, BaseButton, TheCTASection, BaseLoader},
+  name: 'TheProjects',
+  components: {BaseLoader},
   data () {
     return {
       loading: true
@@ -45,9 +45,15 @@ export default {
 </script>
 
 <style scoped>
+.grid-item { width: 300px; display: inline-block; background-color: green;}
+.grid-item--width2 { width: 600px; }
 .fade-enter, .fade-leave-to
 { opacity: 0; }
 *{
   transition: all 0.25s ease-in-out;
+}
+
+#projectspage{
+  background-color: #FEFEFE;
 }
 </style>
