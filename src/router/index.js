@@ -25,6 +25,7 @@ let router = new Router({
       path: '/project/home',
       redirect: '/'
     }
-  ]
+  ],
+  mode: 'history'
 })
 export default router

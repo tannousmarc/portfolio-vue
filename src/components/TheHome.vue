@@ -36,7 +36,7 @@ export default {
     setTimeout(function () {
       self.loading = false
       self.$emit('loaded', 1)
-    }, 600)
+    }, 300)
   },
   beforeDestroy: function () {
     this.$emit('loaded', 0)

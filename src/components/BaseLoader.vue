@@ -36,7 +36,7 @@ export default {
   text-align: center;
   color: #333;
   position: relative;
-  height: 100px;
+  height: 40px;
   margin-top: 50em;
 }
 .spinner {

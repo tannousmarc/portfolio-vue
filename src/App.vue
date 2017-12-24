@@ -17,7 +17,7 @@ export default {
         setTimeout(function () {
           console.log('DUPA')
           self.loaded = true
-        }, 300)
+        }, 400)
       } else {
         // navigated away, unload footer to re-calculate bottom
         this.loaded = false

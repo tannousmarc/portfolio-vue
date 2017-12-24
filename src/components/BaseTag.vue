@@ -18,8 +18,8 @@ export default {
   },
   created () {
     // trivial implementation of a tuple/map, could be made more elegant
-    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java']
-    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire']
+    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C']
+    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower']
     this.color = colors[tags.indexOf(this.text)]
   }
 }
@@ -66,5 +66,14 @@ export default {
   }
   .fire{
     background-color: #ea2d2f;
+  }
+  .azure{
+    background-color: #0496FF;
+  }
+  .tiffany{
+    background-color: #0CBABA;
+  }
+  .willpower{
+    background-color: #F75C03;
   }
 </style>
