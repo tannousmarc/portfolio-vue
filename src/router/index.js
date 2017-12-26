@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import TheHome from '@/components/TheHome'
 import TheProjects from '@/components/TheProjects'
+import ThePlayground from '@/components/ThePlayground'
 
 Vue.use(Router)
 
@@ -24,6 +25,11 @@ let router = new Router({
     {
       path: '/project/home',
       redirect: '/'
+    },
+    {
+      path: '/playground',
+      name: 'ThePlayground',
+      component: ThePlayground
     }
   ],
   mode: 'history'

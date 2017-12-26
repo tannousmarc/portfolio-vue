@@ -1,6 +1,6 @@
 
 <template>
-<transition name = "fade" mode = "out-in">
+<transition-group name = "fade" mode = "out-in">
 <div v-if = "loading" class = "loader" key="loading">
 <BaseLoader />
 </div>
@@ -25,12 +25,10 @@
       <p>{{project.description}}</p>
     </div>
   </span>
-    <!--<div class="grid-item grid-item--width2">tie</div>-->
-
   </div>
 </div>
 </div>
-</transition>
+</transition-group>
 </template>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
@@ -247,9 +245,9 @@ summarized, visualized, and analyzed with ease.`,
         {
           name: 'CS:GO Blitz',
           id: 11,
-          width: 1,
+          width: 2,
           image: require('../assets/project-previews/blitz.png'),
-          description: `Designed the branding for Washington-based startup that harvests, processes, and provides pricing data .`,
+          description: `Built highly successful platform connected to Steam's API, where players could import and export in-game items to be utilized as currency for a plethora of minigames.`,
           tags: [
             {
               id: 1,
@@ -314,7 +312,7 @@ summarized, visualized, and analyzed with ease.`,
 }
 
 #projectspage{
-  background-color: #FEFEFE;
+  background-color: #EEE;
 }
 h1{
   font-size: 1.25em;

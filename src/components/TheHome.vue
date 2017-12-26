@@ -1,6 +1,6 @@
 
 <template>
-<transition name = "fade" mode = "out-in">
+<transition-group name = "fade" mode = "out-in">
 <div v-if = "loading" class = "loader" key="loading">
 <BaseLoader />
 </div>
@@ -12,7 +12,7 @@
 <TheCTASection />
 </div>
 </div>
-</transition>
+</transition-group>
 </template>
 
 <script>

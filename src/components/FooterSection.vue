@@ -1,8 +1,8 @@
 <template>
 <div id = "footer">
-  <a href = "http://www.github.com/tannousmarc"><img src = "../assets/github.png" /></a>
-  <a href = "http://www.codepen.io/marctannous"><img src = "../assets/codepen.png" /></a>
-  <a href = "https://www.linkedin.com/in/marctannous/"><img src = "../assets/linkedin.png" /></a>
+  <a href = "http://www.github.com/tannousmarc"><img src = "../assets/social-media/github.png" /></a>
+  <a href = "http://www.instagram.com/marcanache"><img src = "../assets/social-media/instagram.png" /></a>
+  <a href = "https://www.linkedin.com/in/marctannous/"><img src = "../assets/social-media/linkedin.png" /></a>
   <div id = "trademark">
     Copyright Marc Tannous 2017
   </div>
