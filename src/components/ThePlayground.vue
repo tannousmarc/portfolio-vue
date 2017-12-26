@@ -60,7 +60,7 @@ export default {
               text: 'C'
             }
           ],
-          description: 'Highly optimized game of life, with parallel workers on a 100mhz processor, averaging 40ms per 512x512 iteration.',
+          description: 'Highly optimized game of life, with parallel workers on a 100mhz processor, averaging 20ms per 512x512 iteration.',
           link: 'https://github.com/tannousmarc/xc-gameoflife'
         },
         {

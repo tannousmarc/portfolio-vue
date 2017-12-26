@@ -31,7 +31,7 @@ export default {
     float: bottom;
   }
   #footer img {
-    transition: all 0.2s ease;
+    transition: all 0s ease;
     max-height: 50px;
     margin-right: 0.3em;
   }

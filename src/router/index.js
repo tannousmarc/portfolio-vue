@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import TheHome from '@/components/TheHome'
 import TheProjects from '@/components/TheProjects'
 import ThePlayground from '@/components/ThePlayground'
+import TheContact from '@/components/TheContact'
 
 Vue.use(Router)
 
@@ -30,6 +31,11 @@ let router = new Router({
       path: '/playground',
       name: 'ThePlayground',
       component: ThePlayground
+    },
+    {
+      path: '/contact',
+      name: 'TheContact',
+      component: TheContact
     }
   ],
   mode: 'history'
