@@ -1,11 +1,10 @@
 
 <template>
 <transition-group name = "fade" mode = "out-in">
-<div v-if = "loading" class = "loader" key="loading">
-<BaseLoader />
+<div v-if = "loadCondition" class = "loader" key="loading">
+  <BaseLoader />
 </div>
-<div v-else key="loaded">
-<div id = "projectspage">
+<div v-bind:class = "{hidden: loadCondition}" id = "projectspage" key = "loaded">
   <div class="grid">
   <div v-images-loaded:on.progress="imageProgress">
     <span v-for = "project in projects" :key = "project.id">
@@ -50,6 +49,10 @@ export default {
       const result = image.isLoaded ? 'loaded' : 'broken'
       if (result === 'loaded') {
         this.loadedImages++
+        console.log(this.loadedImages)
+      }
+      if (this.loadedImages === this.projects.length) {
+        console.log('Images done!')
       }
     }
   },
@@ -299,7 +302,19 @@ summarized, visualized, and analyzed with ease.`,
   computed: {
     loadCondition: function () {
       // `this` points to the vm instance
-      return !this.loading && (this.loadedImages === this.projects.length)
+      if (this.loading) {
+        return true
+      }
+      if (!this.loading && !(this.loadedImages === this.projects.length)) {
+        return true
+      }
+      if (!this.loading && (this.loadedImages === this.projects.length)) {
+        return false
+      }
+      // T ORICE = F
+      // F ORICE = F
+      // F F = T
+      // (!a ^ !b)
     }
   },
   mounted: function () {
@@ -335,7 +350,18 @@ summarized, visualized, and analyzed with ease.`,
 
 #projectspage{
   background-color: #EEE;
+  transition-duration: 0, 200ms;
+  transition-property: visibility, opacity;
+  transition-delay: 0;
 }
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition-duration: 200ms, 0;
+    transition-property: opacity, visibility;
+    transition-delay: 0, 200ms;
+}
+
 h1{
   font-size: 1.25em;
   padding: 1em 1.6em 0em;
