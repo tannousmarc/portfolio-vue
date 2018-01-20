@@ -318,6 +318,7 @@ summarized, visualized, and analyzed with ease.`,
     }
   },
   mounted: function () {
+    window.scrollTo(0, 0)
     let self = this
     setTimeout(function () {
       self.loading = false
