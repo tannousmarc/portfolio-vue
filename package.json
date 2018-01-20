@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "vue": "^2.5.2",
+    "vue-images-loaded": "^1.1.2",
     "vue-router": "^3.0.1",
     "vue-scroll": "^2.1.3"
   },

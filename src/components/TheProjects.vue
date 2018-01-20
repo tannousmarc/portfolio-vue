@@ -7,24 +7,26 @@
 <div v-else key="loaded">
 <div id = "projectspage">
   <div class="grid">
-  <span v-for = "project in projects" :key = "project.id">
-    <div v-if="project.width === 1" class = "grid-item">
-      <div class = "project-image" v-bind:style = "{ backgroundImage: 'url(' + project.image + ')' }" />
-      <h1>{{project.name}}</h1>
-      <div class = "line">
-        <BaseTag v-for = "tag in project.tags" :key = "tag.id" :text = "tag.text" />
+  <div v-images-loaded:on.progress="imageProgress">
+    <span v-for = "project in projects" :key = "project.id">
+      <div v-if="project.width === 1" class = "grid-item">
+        <img :src = "project.image" class = "project-image" />
+        <h1>{{project.name}}</h1>
+        <div class = "line">
+          <BaseTag v-for = "tag in project.tags" :key = "tag.id" :text = "tag.text" />
+        </div>
+        <p>{{project.description}}</p>
       </div>
-      <p>{{project.description}}</p>
-    </div>
-    <div v-else class = "grid-item grid-item--width2">
-      <div class = "project-image" v-bind:style = "{ backgroundImage: 'url(' + project.image + ')' }" />
-      <h1>{{project.name}}</h1>
-      <div class = "line">
-        <BaseTag v-for = "tag in project.tags" :key = "tag.id" :text = "tag.text" />
+      <div v-else class = "grid-item grid-item--width2">
+        <img :src = "project.image" class = "project-image" />
+        <h1>{{project.name}}</h1>
+        <div class = "line">
+          <BaseTag v-for = "tag in project.tags" :key = "tag.id" :text = "tag.text" />
+        </div>
+        <p>{{project.description}}</p>
       </div>
-      <p>{{project.description}}</p>
-    </div>
-  </span>
+    </span>
+  </div>
   </div>
 </div>
 </div>
@@ -35,12 +37,26 @@
 <script>
 import BaseLoader from './BaseLoader.vue'
 import BaseTag from './BaseTag.vue'
+import imagesLoaded from 'vue-images-loaded'
+
 export default {
   name: 'TheProjects',
   components: {BaseLoader, BaseTag},
+  directives: {
+    imagesLoaded
+  },
+  methods: {
+    imageProgress (instance, image) {
+      const result = image.isLoaded ? 'loaded' : 'broken'
+      if (result === 'loaded') {
+        this.loadedImages++
+      }
+    }
+  },
   data () {
     return {
       loading: true,
+      loadedImages: 0,
       projects: [
         {
           name: 'Logobox',
@@ -280,6 +296,12 @@ summarized, visualized, and analyzed with ease.`,
       ]
     }
   },
+  computed: {
+    loadCondition: function () {
+      // `this` points to the vm instance
+      return !this.loading && (this.loadedImages === this.projects.length)
+    }
+  },
   mounted: function () {
     let self = this
     setTimeout(function () {
@@ -336,8 +358,7 @@ p{
 .project-image{
   width: 100%;
   height: 250px;
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: cover;
+  display: block;
+  object-fit: cover;
 }
 </style>
