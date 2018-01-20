@@ -10,8 +10,8 @@ export default {
   name: 'TheHeroSection',
   data () {
     return {
-      title: 'I\'m Marc. I design and build fun stuff.',
-      subtitle: 'Still looking for a cool job title.'
+      title: 'Developer and designer living in Bristol,',
+      subtitle: 'currently working for J.P.Morgan.'
     }
   }
 }
@@ -21,23 +21,23 @@ export default {
 #hero{
   width: 100%;
   background-color: #FF5964;
-  padding: 15em 0;
+  padding: 14em 0;
   top: 0;
   z-index: 0;
   color: #fefefe;
 }
 h1{
   font-weight: 300;
-  font-size: 3.5em;
+  font-size: 2.5em;
   margin: 0;
   color: #fcfcfc;
   text-shadow : 0 1px 2px rgba(0,0,0,0.10);
 }
 h2{
-  font-weight: 200;
-  font-size: 2em;
+  font-weight: 300;
+  font-size: 2.5em;
   margin: 0;
   color: #fcfcfc;
-  text-shadow : 0 1px 2px rgba(0,0,0,0.15);
+  text-shadow : 0 1px 2px rgba(0,0,0,0.10);
 }
 </style>

@@ -13,11 +13,7 @@ export default {
     loadFooter: function (id) {
       let self = this
       if (id === 1) {
-        // Account for fading in animation
-        setTimeout(function () {
-          console.log('DUPA')
-          self.loaded = true
-        }, 400)
+        self.loaded = true
       } else {
         // navigated away, unload footer to re-calculate bottom
         this.loaded = false
