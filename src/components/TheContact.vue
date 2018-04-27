@@ -57,9 +57,10 @@ export default {
 { opacity: 0; }
 *{
   transition: all 0.25s ease-in-out;
+  box-sizing: border-box;
 }
 #contactpage{
-  padding: 10em 20em 5em;
+  padding: 10em 15% 5em;
   background-color: #222;
   color: #fefefe;
 }
@@ -77,6 +78,7 @@ h1{
   margin: 0px;
   padding: 0px;
 }
+
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #222;
@@ -151,13 +153,12 @@ input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
   margin: 50px auto 100px auto;
 }
 #contactpage-description{
-  width: 53em;
-  padding: 0 1em;
+  width: 60%;
   margin: 0 auto;
   text-align: left;
 }
 input {
-  width: 50.75em;
+  width: 60%;
   padding: 1.5em 1em;
   margin: 0;
   background: transparent;
@@ -203,7 +204,7 @@ input:hover {
   border-color: #FF5964;
 }
 textarea {
-  width: 50.75em;
+  width: 60%;
   height: 150px;
   padding: 1.5em 1em;
   margin: 0;
@@ -226,12 +227,23 @@ textarea {
 input[type=submit] {
   border-top: none;
   margin-top: -1px;
-  width: 53em;
 }
 
 textarea:hover {
   background: #333;
   color: #fefefe;
+}
+@media only screen and (max-width: 780px){
+  #contactpage{
+    padding: 7em 5% 3em;
+    margin-bottom: -5px;
+  }
+  #contactpage-description, input, textarea{
+    width: 100%;
+  }
+  input[type=submit]{
+    margin-top: -4px;
+  }
 }
 
 </style>

@@ -388,4 +388,65 @@ p{
   display: block;
   object-fit: cover;
 }
+@media only screen and (max-height: 900px){
+  .grid{
+    padding: 10em 5em 3em;
+  }
+}
+@media only screen and (max-width: 1366px){
+  h1{
+    font-size: 1.1em;
+    padding: 1em 1.3em 0em;
+  }
+  .line{
+    padding: 0.1em 1.4em 0.8em;
+  }
+  p{
+    font-size: 0.75em;
+  }
+  .grid-item {
+     width: 350px;
+   }
+  .grid-item--width2 { width: 450px; }
+}
+@media only screen and (max-width: 1280px){
+  h1{
+    padding: 1em 1.5em 0em;
+  }
+  .line{
+    padding: 0.1em 1.6em 0.5em;
+  }
+  .grid-item {
+     width: 300px;
+   }
+  .grid-item--width2 { width: 400px; }
+  p{
+    font-size: 0.85em;
+  }
+}
+@media only screen and (max-width: 1024px){
+  h1{
+    padding: 1em 1.5em 0em;
+  }
+  .line{
+    padding: 0.1em 1.6em 0.5em;
+  }
+  .grid-item {
+     width: 300px;
+   }
+  .grid-item--width2 { width: 375px; }
+  p{
+    font-size: 0.85em;
+  }
+}
+@media only screen and (max-width: 780px){
+  .grid{
+    padding: 7em 5%;
+  }
+  .grid-item{
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+}
 </style>

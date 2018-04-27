@@ -5,11 +5,10 @@
       </span> -->
   <span id = "about-right">
     <h1>Hi.</h1>
-    <p>
-      I'm Marc Tannous. I like to brag about being a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.<br/>
-      Currently, I'm a Technology Analyst Intern at J.P.Morgan.<br /> I'll be available for new adventures in September '18.<br />
-      Here's a <router-link to = "projects">list of selected projects</router-link>
-      that I've been hired to work on over the past few years.
+    <p>I'm Marc Tannous. Currently, I'm a Technology Analyst Intern at J.P.Morgan.
+      <br />I like to brag about being a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.
+      <br />I'll be available for new adventures in September '18.
+      <br />Here's a <router-link to = "projects">list of selected projects</router-link> that I've been hired to work on over the past few years.
     </p>
   </span>
 </div>
@@ -74,5 +73,10 @@ export default {
     cursor: pointer;
     cursor: hand;
     border-bottom: 4px solid #FF5964;
+  }
+  @media only screen and (max-width: 780px){
+    #about-right{
+      margin: 0 5%;
+    }
   }
 </style>

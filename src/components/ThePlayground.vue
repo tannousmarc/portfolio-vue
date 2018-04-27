@@ -1,24 +1,24 @@
 
 <template>
-<transition-group name = "fade" mode = "out-in">
-<div v-if = "loading" class = "loader" key="loading">
-  <BaseLoader />
-</div>
-<div v-else key="loaded">
-  <div id = "playgroundpage">
-    <a v-for = "experiment in experiments" :href = "experiment.link" :key = "experiment.id">
-      <div class = "experiment">
-        <h1>{{experiment.title}}</h1>
-        <div class = "line">
-          <BaseTag v-for = "tag in experiment.tags" :key = "tag.id" :text = "tag.text" />
-        </div>
-        <br />
-        <p>{{experiment.description}}</p>
+  <transition-group name = "fade" mode = "out-in">
+    <div v-if = "loading" class = "loader" key="loading">
+      <BaseLoader />
+    </div>
+    <div v-else key="loaded">
+      <div id = "playgroundpage">
+        <a v-for = "experiment in experiments" :href = "experiment.link" :key = "experiment.id">
+          <div class = "experiment">
+            <h1>{{experiment.title}}</h1>
+            <div class = "line">
+              <BaseTag v-for = "tag in experiment.tags" :key = "tag.id" :text = "tag.text" />
+            </div>
+            <br />
+            <p>{{experiment.description}}</p>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
-</div>
-</transition-group>
+    </div>
+  </transition-group>
 </template>
 
 <script>
@@ -31,6 +31,22 @@ export default {
     return {
       loading: true,
       experiments: [
+        {
+          id: 0,
+          title: 'Operating system kernel',
+          tags: [
+            {
+              id: 1,
+              text: 'Assembly'
+            },
+            {
+              id: 2,
+              text: 'C'
+            }
+          ],
+          description: 'OS Kernel for Cortex ARM Cortex-A8 that supports IPC and provides a helpful command line UI.',
+          link: 'https://github.com/tannousmarc/peckernel.git'
+        },
         {
           id: 1,
           title: 'Procedurally generated terrain',
@@ -108,13 +124,18 @@ export default {
 </script>
 
 <style scoped>
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
 .fade-enter, .fade-leave-to
 { opacity: 0; }
 *{
   transition: all 0.25s ease-in-out;
 }
 #playgroundpage{
-  padding: 10em 20em 3em;
+  padding: 10em 15% 3em;
   background-color: #EEE;
 }
 a{
@@ -153,5 +174,20 @@ p{
 }
 .line{
   padding: 0.2em 0 0.5em;
+}
+@media only screen and (max-width: 780px){
+  #playgroundpage{
+    padding: 7em 5% 3em;
+  }
+  .experiment{
+    padding: 2em 1em;
+  }
+  h1{
+    font-size: 1.5em;
+  }
+  p{
+    font-size: 1.2em;
+    display: block;
+  }
 }
 </style>

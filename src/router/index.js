@@ -4,6 +4,7 @@ import TheHome from '@/components/TheHome'
 import TheProjects from '@/components/TheProjects'
 import ThePlayground from '@/components/ThePlayground'
 import TheContact from '@/components/TheContact'
+import The404 from '@/components/The404'
 
 Vue.use(Router)
 
@@ -28,6 +29,18 @@ let router = new Router({
       redirect: '/'
     },
     {
+      path: '/project/projects',
+      redirect: '/projects'
+    },
+    {
+      path: '/project/playground',
+      redirect: '/playground'
+    },
+    {
+      path: '/project/contact',
+      redirect: '/contact'
+    },
+    {
       path: '/playground',
       name: 'ThePlayground',
       component: ThePlayground
@@ -36,7 +49,9 @@ let router = new Router({
       path: '/contact',
       name: 'TheContact',
       component: TheContact
-    }
+    },
+    { path: '*',
+      component: The404 }
   ],
   mode: 'history'
 })

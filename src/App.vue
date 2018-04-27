@@ -20,6 +20,7 @@ export default {
       }
     }
   }
+
 }
 </script>
 
@@ -47,6 +48,7 @@ body{
   margin: 0px;
   overflow-y: scroll;
   background-color: #FF5964;
+
 }
 
 </style>

@@ -12,15 +12,14 @@ if(empty($name)||empty($visitor_email))
 
 $email_from = $visitor_email;
 $email_subject = "New Form submission";
-$email_body = "You have received a new message from $name.\n".
+$email_body = "You have received a new message from $email_from.\n".
     "Here is the message:\n $message  \n".
 
 $to = "tannousmarcportfolio@gmail.com";
-$headers = "From: $email_from \r\n";
-$headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!
-mail($to,$email_subject,$email_body,$headers);
-echo "<script type=\"text/javascript\">window.alert('E-mail Sent.');window.location.href = '../contact';</script>"; 
+mail($to,$email_subject,$email_body);
+echo "<script type=\"text/javascript\">window.alert('E-mail Sent.');window.location.href = '../contact';</script>";
 
-
+$url = 'http://www.tannousmarc.com'; // this can be set based on whatever
+header( "Location: $url" );
 ?>
