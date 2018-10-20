@@ -44,7 +44,7 @@ export default {
               text: 'C'
             }
           ],
-          description: 'OS Kernel for Cortex ARM Cortex-A8 that supports IPC and provides a helpful command line UI.',
+          description: 'OS Kernel for ARM Cortex-A8 that supports basic IPC via pipes. Comes with a helpful command line interface.',
           link: 'https://github.com/tannousmarc/peckernel.git'
         },
         {

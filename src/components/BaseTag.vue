@@ -18,8 +18,8 @@ export default {
   },
   created () {
     // trivial implementation of a tuple/map, could be made more elegant
-    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C', 'Graph Theory', 'Three.js', 'Concurrent Computing', 'Assembly']
-    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower', 'pearl', 'maya', 'cinereous', 'aquamarine']
+    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C', 'Graph Theory', 'Three.js', 'Concurrent Computing', 'Assembly', 'React.js', 'TypeScript', 'Python']
+    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower', 'pearl', 'maya', 'cinereous', 'aquamarine', 'reactblue', 'hazmat', 'pythonblue']
     this.color = colors[tags.indexOf(this.text)]
   }
 }
@@ -45,6 +45,15 @@ export default {
   }
   .citrine{
     background-color: #E3B505;
+  }
+  .hazmat{
+    background-color: #f0db4f;
+  }
+  .reactblue{
+    background-color: #4ad5ff;
+  }
+  .pythonblue{
+    background-color: #0c9dbf;
   }
   .pink{
     background-color: #F0386B;

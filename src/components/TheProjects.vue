@@ -62,23 +62,23 @@ export default {
       loadedImages: 0,
       projects: [
         {
-          name: 'Logobox',
+          name: 'JPMorgan Chase & Co',
           id: 1,
           width: 1,
-          image: require('../assets/project-previews/logobox.png'),
-          description: `Co-founder of an online platform that connected new businesses with teams of designers, in order to provide bespoke branding solutions.`,
+          image: require('../assets/project-previews/jpm.png'),
+          description: `Developed a scalable web database browser with custom object views for the 1700 members of the Athena Core team.`,
           tags: [
             {
               id: 1,
-              text: 'Marketing'
+              text: 'TypeScript'
             },
             {
               id: 2,
-              text: 'JS'
+              text: 'React.js'
             },
             {
               id: 3,
-              text: 'UX'
+              text: 'Python'
             }
           ]
         },
@@ -294,6 +294,27 @@ summarized, visualized, and analyzed with ease.`,
               text: 'Marketing'
             }
           ]
+        },
+        {
+          name: 'Logobox',
+          id: 13,
+          width: 1,
+          image: require('../assets/project-previews/logobox.png'),
+          description: `Co-founder of an online platform that connected new businesses with teams of designers, in order to provide bespoke branding solutions.`,
+          tags: [
+            {
+              id: 1,
+              text: 'Marketing'
+            },
+            {
+              id: 2,
+              text: 'JS'
+            },
+            {
+              id: 3,
+              text: 'UX'
+            }
+          ]
         }
 
       ]
@@ -311,10 +332,6 @@ summarized, visualized, and analyzed with ease.`,
       if (!this.loading && (this.loadedImages === this.projects.length)) {
         return false
       }
-      // T ORICE = F
-      // F ORICE = F
-      // F F = T
-      // (!a ^ !b)
     }
   },
   mounted: function () {
