@@ -18,8 +18,8 @@ export default {
   },
   created () {
     // trivial implementation of a tuple/map, could be made more elegant
-    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C', 'Graph Theory', 'Three.js', 'Concurrent Computing', 'Assembly', 'React.js', 'TypeScript', 'Python']
-    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower', 'pearl', 'maya', 'cinereous', 'aquamarine', 'reactblue', 'hazmat', 'pythonblue']
+    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C', 'Graph Theory', 'Three.js', 'Concurrent Computing', 'Assembly', 'React.js', 'TypeScript', 'Python', 'Haskell']
+    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower', 'pearl', 'maya', 'cinereous', 'aquamarine', 'reactblue', 'hazmat', 'pythonblue', 'haze']
     this.color = colors[tags.indexOf(this.text)]
   }
 }
@@ -39,6 +39,9 @@ export default {
     font-size: 0.8em;
     margin-top: 0.5em;
     text-shadow : 0 1px 2px rgba(0,0,0,0.25);
+  }
+  .haze{
+    background-color: #8e508a;
   }
   .green{
     background-color: #27ae60;

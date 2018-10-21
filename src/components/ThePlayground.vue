@@ -33,6 +33,18 @@ export default {
       experiments: [
         {
           id: 0,
+          title: 'Minimal language interpreter',
+          tags: [
+            {
+              id: 1,
+              text: 'Haskell'
+            }
+          ],
+          description: 'Minimal interpreter for the WHILE language as described by the book Semantics with Applications: A Formal Introduction.',
+          link: 'https://github.com/tannousmarc/pyramid.git'
+        },
+        {
+          id: 1,
           title: 'Operating system kernel',
           tags: [
             {
@@ -48,7 +60,7 @@ export default {
           link: 'https://github.com/tannousmarc/peckernel.git'
         },
         {
-          id: 1,
+          id: 2,
           title: 'Procedurally generated terrain',
           tags: [
             {
@@ -64,7 +76,7 @@ export default {
           link: 'https://github.com/tannousmarc/three-procedural-environment'
         },
         {
-          id: 2,
+          id: 3,
           title: 'Parallel Game of Life',
           tags: [
             {
@@ -80,7 +92,7 @@ export default {
           link: 'https://github.com/tannousmarc/xc-gameoflife'
         },
         {
-          id: 3,
+          id: 4,
           title: 'Lock-picking minigame',
           tags: [
             {
@@ -92,7 +104,7 @@ export default {
           link: 'https://github.com/tannousmarc/minimal-lockpick'
         },
         {
-          id: 4,
+          id: 5,
           title: 'Scotland Yard AI',
           tags: [
             {

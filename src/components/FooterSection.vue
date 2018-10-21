@@ -4,7 +4,7 @@
   <a href = "http://www.instagram.com/marcanache"><img src = "../assets/social-media/instagram.png" /></a>
   <a href = "https://www.linkedin.com/in/marctannous/"><img src = "../assets/social-media/linkedin.png" /></a>
   <div id = "trademark">
-    Copyright Marc Tannous 2017
+    Copyright Marc Tannous {{ new Date().getFullYear() }}
   </div>
 </div>
 </template>
