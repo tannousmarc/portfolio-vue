@@ -24,6 +24,9 @@
 #generated canvas{
   display: block;
 }
+#generated:hover{
+  cursor: ew-resize;
+}
 .tag{
   font-weight: 500;
   font-size: 2.5em;
@@ -85,7 +88,7 @@ export default {
     return {
       tags: ['designer', 'developer'],
       title: 'I\'m Marc, a ',
-      subtitle: 'currently living in Bristol, UK.'
+      subtitle: 'currently living in London, UK.'
     }
   },
   mounted: function () {
@@ -1509,66 +1512,99 @@ export default {
 
 
 
+    const renderer	= new THREE.WebGLRenderer({
+    antialias	: true
+});
 
-    var renderer	= new THREE.WebGLRenderer({
-    		antialias	: true
-    	});
-    /* Fullscreen */
-    	renderer.setSize( document.body.clientWidth, 0.55 * window.innerHeight );
-    /* Append to HTML */
-      var div = document.getElementById('generated');
-    	div.appendChild( renderer.domElement );
-    	var onRenderFcts= [];
-    	var scene	= new THREE.Scene();
-    	var camera	= new THREE.PerspectiveCamera(25, document.body.clientWidth /   (0.55 * window.innerHeight), 0.1, 1000);
-    /* Play around with camera positioning */
-    	camera.position.z = 15;
-      camera.position.y = 2;
-    /* Fog provides depth to the landscape*/
-      scene.fog = new THREE.Fog(0xFF5964, 0, 45);
-    	;(function(){
-    		var light	= new THREE.AmbientLight( 0xFF5964 );
-    		scene.add( light );
-    		var light	= new THREE.DirectionalLight('white', 5);
-    		light.position.set(0.5, 0.0, 2);
-    		scene.add( light );
-    		var light	= new THREE.DirectionalLight('white', 0.75*2);
-    		light.position.set(-0.5, -0.5, -2);
-    		scene.add( light );
-    	})()
-    	var heightMap	= THREEx.Terrain.allocateHeightMap(256,256);
-    	THREEx.Terrain.simplexHeightMap(heightMap);
-    	var geometry	= THREEx.Terrain.heightMapToPlaneGeometry(heightMap);
-    	THREEx.Terrain.heightMapToVertexColor(heightMap, geometry);
-    /* Wireframe built-in color is white, no need to change that */
-    	var material	= new THREE.MeshBasicMaterial({
-    		wireframe: true
-    	});
-    	var mesh	= new THREE.Mesh( geometry, material );
-    	scene.add( mesh );
-    	mesh.lookAt(new THREE.Vector3(0,1,0));
-    /* Play around with the scaling */
-    	mesh.scale.y	= 4;
-    	mesh.scale.x	= 5;
-    	mesh.scale.z	= 0.25;
-    	mesh.scale.multiplyScalar(10);
-    /* Play around with the camera */
-    	onRenderFcts.push(function(delta, now){
-    		mesh.rotation.z += 0.20 * delta;
-    	});
-    	onRenderFcts.push(function(){
-    		renderer.render( scene, camera );
-    	});
-    	var lastTimeMsec= null;
-    	requestAnimationFrame(function animate(nowMsec){
-    		requestAnimationFrame( animate );
-    		lastTimeMsec	= lastTimeMsec || nowMsec-1000/60;
-    		var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec);
-    		lastTimeMsec	= nowMsec;
-    		onRenderFcts.forEach(function(onRenderFct){
-    			onRenderFct(deltaMsec/1000, nowMsec/1000)
-    		});
-    	});
+/* Fullscreen */
+renderer.setSize(window.innerWidth, 0.55 * window.innerHeight);
+const div = document.getElementById('generated');
+div.appendChild( renderer.domElement );
+div.addEventListener( 'mousemove', onMouseMove, false );
+
+const scene	= new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(25, window.innerWidth / (0.55 * window.innerHeight), 0.01, 1000);
+camera.position = {
+    x: 0,
+    y: 6.5, 
+    z: 0
+};
+camera.rotation.x = -0.4;
+
+scene.fog = new THREE.Fog(0xFF5964, 5, 27);
+scene.add( new THREE.AmbientLight( 0xffffff ) );
+
+const heightMap	= THREEx.Terrain.allocateHeightMap(256,256);
+THREEx.Terrain.simplexHeightMap(heightMap)	;
+
+const geometry	= THREEx.Terrain.heightMapToPlaneGeometry(heightMap);
+THREEx.Terrain.heightMapToVertexColor(heightMap, geometry);
+
+const material	= new THREE.MeshPhongMaterial({
+    wireframe: true,
+    lights: true,
+    fog: true
+});
+
+const mesh	= new THREE.Mesh( geometry, material );
+scene.add( mesh );
+
+// rotate the mesh "upright"
+mesh.lookAt(new THREE.Vector3(0,0.3,0));
+/* Play around with the scaling */
+mesh.scale.y	= 3.5;
+mesh.scale.x	= 3;
+mesh.scale.z	= 0.22;
+mesh.scale.multiplyScalar(10);
+
+
+let onRenderFcts= [];
+const mouse = new THREE.Vector2();
+const target = new THREE.Vector2();
+const windowHalf = new THREE.Vector2( window.innerWidth / 2, window.innerHeight / 2 );
+
+function onMouseMove( event ) {
+	mouse.x = ( event.clientX - windowHalf.x );
+	mouse.y = ( event.clientY - windowHalf.x );
+}
+
+
+/* Play around with the camera */
+onRenderFcts.push(function(delta, timestamp){
+    for (var x = 0; x < mesh.geometry.vertices.length; x++) {
+        var v = mesh.geometry.vertices[x];
+        v.z = geometry.vertices[x].z  + (-0.001 * Math.sin((timestamp * 2 + (v.x * 35 )))) * 2.5;
+    }    
+    
+    mesh.geometry.computeFaceNormals();	
+    mesh.geometry.normalsNeedUpdate = true;  
+    mesh.geometry.verticesNeedUpdate =true;
+    target.x = (0- mouse.x ) * 0.015;
+    target.y = (-500- mouse.y ) * 0.015;
+  
+    // camera.rotation.x += 0.0002 * ( target.y - camera.rotation.x );
+    if(camera.rotation.y >= 0){
+      camera.rotation.y = Math.min(camera.rotation.y + 0.0001 * ( target.x - camera.rotation.y ), 0.175);
+    }
+    else{
+      camera.rotation.y = Math.max(camera.rotation.y + 0.0001 * ( target.x - camera.rotation.y ), -0.175);
+    }
+    renderer.render( scene, camera );		
+})
+
+let lastTimeMsec= null;
+requestAnimationFrame(function animate(nowMsec){
+    requestAnimationFrame(animate);
+    lastTimeMsec	= lastTimeMsec || nowMsec-1000/60;
+    var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec);
+    lastTimeMsec	= nowMsec;
+    onRenderFcts.forEach(function(onRenderFct){
+        onRenderFct(deltaMsec/1000, nowMsec/1000);
+    });
+});
+
+
   }
 }
 

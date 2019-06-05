@@ -5,8 +5,8 @@
       </span> -->
   <span id = "about-right">
     <h1>Hi.</h1>
-    <p>I'm Marc Tannous. Currently, I'm a final year Computer Science student.
-      <br />I like to brag about being a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.
+    <p>I'm Marc. Currently, I'm a Graduate Software Engineer at J.P. Morgan.
+      <br />Once upon a time I was a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.
       <br />Here's a <router-link to = "projects">list of selected projects</router-link> that I've been hired to work on over the past few years.
     </p>
   </span>
