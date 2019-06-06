@@ -1532,7 +1532,8 @@ camera.position = {
 };
 camera.rotation.x = -0.4;
 
-scene.fog = new THREE.Fog(0xFF5964, 5, 27);
+// fog hides the fact that our mesh is not, in fact, stretched infinitely on the Z axis
+scene.fog = new THREE.Fog(0xFF5964, 5, 20);
 scene.add( new THREE.AmbientLight( 0xffffff ) );
 
 const heightMap	= THREEx.Terrain.allocateHeightMap(256,256);

@@ -1,4 +1,3 @@
-//
 <template>
   <nav id = "nav-bar" v-bind:class="{ scroll: scrolled }" v-if = "!isMobile" role = "navigation">
     <div id = "nav-container">
@@ -139,7 +138,7 @@ export default {
   display: inline-block;
   text-align: center;
   margin: 0;
-  pading: 0;
+  padding: 0;
   vertical-align: middle;
   font-size: 1.1em;
   font-weight: 500;

@@ -29,7 +29,7 @@ export default {
     background-color: #fefefe;
     padding: 5em 0;
     white-space: nowrap;
-
+    border-top: 1px solid gainsboro;
   }
   /*#about-left{
     display: inline-block;
