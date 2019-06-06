@@ -1517,14 +1517,14 @@ export default {
 });
 
 /* Fullscreen */
-renderer.setSize(window.innerWidth, 0.55 * window.innerHeight);
+renderer.setSize( document.body.clientWidth, 0.55 * window.innerHeight);
 const div = document.getElementById('generated');
 div.appendChild( renderer.domElement );
 div.addEventListener( 'mousemove', onMouseMove, false );
 
 const scene	= new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(25, window.innerWidth / (0.55 * window.innerHeight), 0.01, 1000);
+const camera = new THREE.PerspectiveCamera(25,  document.body.clientWidth / (0.55 * window.innerHeight), 0.01, 1000);
 camera.position = {
     x: 0,
     y: 6.5, 
@@ -1580,8 +1580,8 @@ onRenderFcts.push(function(delta, timestamp){
     mesh.geometry.computeFaceNormals();	
     mesh.geometry.normalsNeedUpdate = true;  
     mesh.geometry.verticesNeedUpdate =true;
-    target.x = (0- mouse.x ) * 0.015;
-    target.y = (-500- mouse.y ) * 0.015;
+    target.x = (0- mouse.x ) * 0.025;
+    target.y = (-500- mouse.y ) * 0.025;
   
     // camera.rotation.x += 0.0002 * ( target.y - camera.rotation.x );
     if(camera.rotation.y >= 0){

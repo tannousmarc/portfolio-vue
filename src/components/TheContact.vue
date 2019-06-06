@@ -7,8 +7,7 @@
   <div id = "contactpage">
     <div id = "contactpage-description">
       <h1>Contact</h1>
-      <p>I am currently only available for part-time opportunities.<br />
-      If you would like to collaborate on a project, please send me a detailed message and I’ll get back to you within 24 hours.
+      <p>I am currently only available for part-time opportunities.<br />If you would like to collaborate on a project, please send me a detailed message and I’ll get back to you within 24 hours.
       </p>
     </div>
     <form action="../assets/form.php" method="post">
