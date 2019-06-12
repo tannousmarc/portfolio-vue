@@ -1,10 +1,10 @@
 <template>
 <div id = "hero">
-  <h1>{{title}}</h1>
+  <!-- <h1>{{title}}</h1>
   <span class = "tag">{{tags[0]}}</span>
   <h1> and</h1>
   <span class = "tag">{{tags[1]}}</span>
-  <h2>{{subtitle}}</h2>
+  <h2>{{subtitle}}</h2> -->
   <div id = "generated"></div>
 </div>
 </template>
@@ -1516,7 +1516,7 @@ export default {
     antialias	: true
 });
 
-/* Fullscreen */
+
 renderer.setSize( document.body.clientWidth, 0.55 * window.innerHeight);
 const div = document.getElementById('generated');
 div.appendChild( renderer.domElement );
@@ -1532,7 +1532,7 @@ camera.position = {
 };
 camera.rotation.x = -0.4;
 
-// fog hides the fact that our mesh is not, in fact, stretched infinitely on the Z axis
+// fog hides the fact that our mesh does not, in fact, stretch infinitely on the Z axis
 scene.fog = new THREE.Fog(0xFF5964, 5, 20);
 scene.add( new THREE.AmbientLight( 0xffffff ) );
 
@@ -1556,7 +1556,7 @@ mesh.lookAt(new THREE.Vector3(0,0.3,0));
 /* Play around with the scaling */
 mesh.scale.y	= 3.5;
 mesh.scale.x	= 3;
-mesh.scale.z	= 0.22;
+mesh.scale.z	= 0.25;
 mesh.scale.multiplyScalar(10);
 
 
@@ -1570,20 +1570,30 @@ function onMouseMove( event ) {
 	mouse.y = ( event.clientY - windowHalf.x );
 }
 
+const amplitude = 0.6;
+const speed = 1;
 
-/* Play around with the camera */
 onRenderFcts.push(function(delta, timestamp){
-    for (var x = 0; x < mesh.geometry.vertices.length; x++) {
-        var v = mesh.geometry.vertices[x];
-        v.z = geometry.vertices[x].z  + (-0.001 * Math.sin((timestamp * 2 + (v.x * 35 )))) * 2.5;
-    }    
+  timestamp *= speed;
+    for (let x = 0; x < mesh.geometry.vertices.length; x++) {
+      // WAVE EQUATION
+      // Only simulates ripples: requires constant external stimuli to prevent from reaching stable state Sinf with still water.
+
+      // mesh.geometry.vertices[x].z = 2 * verticesMinusOne[x].z - 0.996 * verticesMinusTwo[x].z + T(verticesMinusOne, x);
+
+      // SIMULATED WAVES
+      // Simulates constant waves by continuously sampling from a sinusoidal at each timestep.
+      // ! Sampling from multiple sinusoidals, either in the same direction, or combining directions makes users dizzy.
+      mesh.geometry.vertices[x].z = geometry.vertices[x].z + 
+                                    -0.0025 * Math.sin((timestamp / amplitude + (mesh.geometry.vertices[x].x * 35)));
+    }  
     
     mesh.geometry.computeFaceNormals();	
     mesh.geometry.normalsNeedUpdate = true;  
-    mesh.geometry.verticesNeedUpdate =true;
-    target.x = (0- mouse.x ) * 0.025;
+    mesh.geometry.verticesNeedUpdate = true;
+
+    target.x = (0 - mouse.x ) * 0.025;
     target.y = (-500- mouse.y ) * 0.025;
-  
     // camera.rotation.x += 0.0002 * ( target.y - camera.rotation.x );
     if(camera.rotation.y >= 0){
       camera.rotation.y = Math.min(camera.rotation.y + 0.0001 * ( target.x - camera.rotation.y ), 0.175);
@@ -1591,14 +1601,15 @@ onRenderFcts.push(function(delta, timestamp){
     else{
       camera.rotation.y = Math.max(camera.rotation.y + 0.0001 * ( target.x - camera.rotation.y ), -0.175);
     }
-    renderer.render( scene, camera );		
-})
 
-let lastTimeMsec= null;
+    renderer.render( scene, camera );		
+});
+
+let lastTimeMsec = null;
 requestAnimationFrame(function animate(nowMsec){
     requestAnimationFrame(animate);
     lastTimeMsec	= lastTimeMsec || nowMsec-1000/60;
-    var deltaMsec	= Math.min(200, nowMsec - lastTimeMsec);
+    const deltaMsec	= Math.min(200, nowMsec - lastTimeMsec);
     lastTimeMsec	= nowMsec;
     onRenderFcts.forEach(function(onRenderFct){
         onRenderFct(deltaMsec/1000, nowMsec/1000);
