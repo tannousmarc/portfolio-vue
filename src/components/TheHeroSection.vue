@@ -1,10 +1,10 @@
 <template>
 <div id = "hero">
-  <!-- <h1>{{title}}</h1>
+  <h1>{{title}}</h1>
   <span class = "tag">{{tags[0]}}</span>
   <h1> and</h1>
   <span class = "tag">{{tags[1]}}</span>
-  <h2>{{subtitle}}</h2> -->
+  <h2>{{subtitle}}</h2>
   <div id = "generated"></div>
 </div>
 </template>
