@@ -45,7 +45,7 @@ export default {
             }
           ],
           description: 'Global illumination implemented in C++ using Monte Carlo path tracing. Objects can be rendered in a number of materials such as diffuse, specular, and refractive. Additionally, the project supports custom object loading, and is capable of simulating fog.',
-          link: 'https://github.com/tannousmarc/graphics.git'
+          link: 'https://github.com/tannousmarc/graphics/tree/master/CW/raytracer'
         },
         {
           id: 1,
@@ -65,7 +65,7 @@ export default {
             }
           ],
           description: 'Successful side-channel attack capable of retrieving private key of naive AES implementation on target platform by measuring power consumption using an oscilloscope. The implementation is subsequently protected using a number of measures.',
-          link: 'https://github.com/tannousmarc/AppliedSec.git'
+          link: 'https://github.com/tannousmarc/AppSec.git'
         },
         {
           id: 2,
@@ -97,7 +97,7 @@ export default {
             }
           ],
           description: 'Rasterizer capable of clipping, displaying shadows, loading custom objects, and modelling custom textures using barycentric coordinates.',
-          link: 'https://github.com/tannousmarc/graphics.git'
+          link: 'https://github.com/tannousmarc/graphics/tree/master/CW/rasteriser'
         },
         {
           id: 4,
@@ -109,7 +109,7 @@ export default {
             }
           ],
           description: 'Retro platformer written from scratch in vanilla ES6 JS. Processes a spritesheet into tiles, objects, and animations, which are then procedurally placed into a never-ending scene by sampling perlin noise.',
-          link: 'https://github.com/tannousmarc/pyramid.git'
+          link: 'https://infinite-platformer.herokuapp.com'
         },
         {
           id: 5,
