@@ -222,7 +222,7 @@ a {
 /* Menu */
 .menu {
   width: 100%;
-  background-color: #222;
+  background-color: #fefefe;
   margin: 0;
   padding: 0;
   clear: both;
@@ -240,7 +240,8 @@ a {
   text-transform: uppercase;
   padding: 10px 0;
   font-size: 1.25em;
-  border-bottom: 1px solid #FEFEFE;
+  border-bottom: 1px solid #222;
+  color: #222;
 }
 
 .menu a:first-child {

@@ -2,7 +2,7 @@
 <div id = "hero">
   <h1>{{title}}</h1>
   <span class = "tag">{{tags[0]}}</span>
-  <h1> and</h1>
+  <h1> & </h1>
   <span class = "tag">{{tags[1]}}</span>
   <h2>{{subtitle}}</h2>
   <div id = "generated"></div>
@@ -88,7 +88,7 @@ export default {
     return {
       tags: ['designer', 'developer'],
       title: 'I\'m Marc, a ',
-      subtitle: 'currently living in London, UK.'
+      subtitle: 'based in London, UK.'
     }
   },
   mounted: function () {
@@ -1533,10 +1533,10 @@ camera.position = {
 camera.rotation.x = -0.4;
 
 // fog hides the fact that our mesh does not, in fact, stretch infinitely on the Z axis
-scene.fog = new THREE.Fog(0xFF5964, 5, 20);
+scene.fog = new THREE.Fog(0xFF5964, 5, 18);
 scene.add( new THREE.AmbientLight( 0xffffff ) );
 
-const heightMap	= THREEx.Terrain.allocateHeightMap(256,256);
+const heightMap	= THREEx.Terrain.allocateHeightMap(320,256);
 THREEx.Terrain.simplexHeightMap(heightMap)	;
 
 const geometry	= THREEx.Terrain.heightMapToPlaneGeometry(heightMap);
@@ -1571,7 +1571,7 @@ function onMouseMove( event ) {
 }
 
 const amplitude = 0.6;
-const speed = 1;
+const speed = 0.75;
 
 onRenderFcts.push(function(delta, timestamp){
   timestamp *= speed;

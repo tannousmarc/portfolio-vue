@@ -33,6 +33,86 @@ export default {
       experiments: [
         {
           id: 0,
+          title: 'Monte Carlo path tracer',
+          tags: [
+            {
+              id: 1,
+              text: 'C++'
+            },
+            {
+              id: 2,
+              text: 'Computer Graphics'
+            }
+          ],
+          description: 'Global illumination implemented in C++ using Monte Carlo path tracing. Objects can be rendered in a number of materials such as diffuse, specular, and refractive. Additionally, the project supports custom object loading, and is capable of simulating fog.',
+          link: 'https://github.com/tannousmarc/graphics.git'
+        },
+        {
+          id: 1,
+          title: 'Side-channel attack on target platform',
+          tags: [
+            {
+              id: 1,
+              text: 'C'
+            },
+            {
+              id: 2,
+              text: 'Python'
+            },
+            {
+              id: 3,
+              text: 'Security'
+            }
+          ],
+          description: 'Successful side-channel attack capable of retrieving private key of naive AES implementation on target platform by measuring power consumption using an oscilloscope. The implementation is subsequently protected using a number of measures.',
+          link: 'https://github.com/tannousmarc/AppliedSec.git'
+        },
+        {
+          id: 2,
+          title: 'NLP platform for querying diversified data',
+          tags: [
+            {
+              id: 1,
+              text: 'Python'
+            },
+            {
+              id: 2,
+              text: 'NLP'
+            }
+          ],
+          description: 'Developed a platform capable of answering natural language questions and visualising the results across datasets of diverse formats (SQL, RDF, CSV).',
+          link: 'https://github.com/tannousmarc/Veritas.git'
+        },
+        {
+          id: 3,
+          title: 'Rasterizer',
+          tags: [
+            {
+              id: 1,
+              text: 'C++'
+            },
+            {
+              id: 2,
+              text: 'Computer Graphics'
+            }
+          ],
+          description: 'Rasterizer capable of clipping, displaying shadows, loading custom objects, and modelling custom textures using barycentric coordinates.',
+          link: 'https://github.com/tannousmarc/graphics.git'
+        },
+        {
+          id: 4,
+          title: 'Procedurally-generated retro platformer',
+          tags: [
+            {
+              id: 1,
+              text: 'JS'
+            }
+          ],
+          description: 'Retro platformer written from scratch in vanilla ES6 JS. Processes a spritesheet into tiles, objects, and animations, which are then procedurally placed into a never-ending scene by sampling perlin noise.',
+          link: 'https://github.com/tannousmarc/pyramid.git'
+        },
+        {
+          id: 5,
           title: 'Minimal language interpreter',
           tags: [
             {
@@ -44,7 +124,7 @@ export default {
           link: 'https://github.com/tannousmarc/pyramid.git'
         },
         {
-          id: 1,
+          id: 6,
           title: 'Operating system kernel',
           tags: [
             {
@@ -60,7 +140,7 @@ export default {
           link: 'https://github.com/tannousmarc/peckernel.git'
         },
         {
-          id: 2,
+          id: 7,
           title: 'Procedurally generated terrain',
           tags: [
             {
@@ -72,11 +152,11 @@ export default {
               text: 'JS'
             }
           ],
-          description: 'Procedurally generated three dimensional terrain using three.js.',
+          description: 'Procedurally-generated three dimensional terrain using three.js.',
           link: 'https://github.com/tannousmarc/three-procedural-environment'
         },
         {
-          id: 3,
+          id: 8,
           title: 'Parallel Game of Life',
           tags: [
             {
@@ -92,7 +172,7 @@ export default {
           link: 'https://github.com/tannousmarc/xc-gameoflife'
         },
         {
-          id: 4,
+          id: 9,
           title: 'Lock-picking minigame',
           tags: [
             {
@@ -102,22 +182,6 @@ export default {
           ],
           description: 'Minigame that imitates the mechanism of a vault.',
           link: 'https://github.com/tannousmarc/minimal-lockpick'
-        },
-        {
-          id: 5,
-          title: 'Scotland Yard AI',
-          tags: [
-            {
-              id: 1,
-              text: 'Graph Theory'
-            },
-            {
-              id: 2,
-              text: 'Java'
-            }
-          ],
-          description: 'Artificial intelligence that picks the best move based on a game state tree, the MiniMax algorithm and Alpha-Beta pruning.',
-          link: 'https://github.com/tannousmarc/scotland-yard-AI'
         }
       ]
     }

@@ -18,8 +18,8 @@ export default {
   },
   created () {
     // trivial implementation of a tuple/map, could be made more elegant
-    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C', 'Graph Theory', 'Three.js', 'Concurrent Computing', 'Assembly', 'React.js', 'TypeScript', 'Python', 'Haskell']
-    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower', 'pearl', 'maya', 'cinereous', 'aquamarine', 'reactblue', 'hazmat', 'pythonblue', 'haze']
+    const tags = ['JS', 'PHP', 'UX', 'Mobile', 'Print', 'Marketing', 'Big Data', 'Vue.js', 'Java', 'SQLite', 'C++', 'C', 'Graph Theory', 'Three.js', 'Concurrent Computing', 'Assembly', 'React.js', 'TypeScript', 'Python', 'Haskell', 'Computer Graphics', 'NLP', 'Security']
+    const colors = ['pink', 'green', 'citrine', 'lapislazuli', 'dungeon', 'lavender', 'crayolablue', 'forest', 'fire', 'azure', 'tiffany', 'willpower', 'pearl', 'maya', 'cinereous', 'aquamarine', 'reactblue', 'hazmat', 'pythonblue', 'haze', 'koamaru', 'salmon', 'darkscarlet']
     this.color = colors[tags.indexOf(this.text)]
   }
 }
@@ -39,6 +39,18 @@ export default {
     font-size: 0.8em;
     margin-top: 0.5em;
     text-shadow : 0 1px 2px rgba(0,0,0,0.25);
+  }
+  .salmon{
+    background-color: #EF946C;
+  }
+  .eggblue{
+    background-color: #00CECB;
+  }
+  .darkscarlet{
+    background-color: #4C061D;
+  }
+  .koamaru{
+    background-color: #2F2963;
   }
   .haze{
     background-color: #8e508a;
