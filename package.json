@@ -11,7 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "npm": "^6.9.0",
+    "npm": "^6.13.4",
     "three": "^0.92.0",
     "vue": "^2.5.2",
     "vue-images-loaded": "^1.1.2",
