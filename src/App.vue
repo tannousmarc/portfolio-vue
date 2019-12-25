@@ -47,7 +47,7 @@ export default {
 body{
   margin: 0px;
   overflow-y: scroll;
-  background-color: #FF5964;
+  background-color: #2f3640;
 
 }
 

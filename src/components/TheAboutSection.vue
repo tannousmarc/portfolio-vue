@@ -1,14 +1,13 @@
 <template>
 <div id = "about">
-<!--  <span id = "about-left">
-        <img src = "../assets/profile.jpg" />
-      </span> -->
+ <span id = "about-left">
+        <img src = "../assets/profile.png" />
+  </span>
   <span id = "about-right">
-    <h1>Hi.</h1>
-    <p>I'm Marc. Currently, I'm a Graduate Software Engineer at J.P. Morgan.
-      <br />Once upon a time I was a <a href = "https://www.google-melange.com/archive/gci/2014">Google award-winning developer</a>.
-      <br />Here's a <router-link to = "projects">list of selected projects</router-link> that I've been hired to work on over the past few years.
-      <br />Additionally, the <router-link to = "playground">playground page</router-link> is where I showcase fun personal projects.
+    <h1>Hey.</h1>
+    <p>I'm Marc. I'm a Forward Deployed Software Engineer at Palantir.
+      <br />Check out a <router-link to = "projects">list of selected projects</router-link> from my days as a contractor.
+      <br />Additionally, the <router-link to = "playground">playground page</router-link> is where I showcase fun side projects.
     </p>
   </span>
 </div>
@@ -31,17 +30,17 @@ export default {
     white-space: nowrap;
     border-top: 1px solid gainsboro;
   }
-  /*#about-left{
+  #about-left{
     display: inline-block;
-    width: 45%;
+    width: 20%;
     vertical-align: middle;
     white-space: normal;
   }
   #about-left img{
-    // hand-generated octagon clipping path
-    clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
-    -webkit-clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
-  }*/
+    border-radius: 50%;
+    max-height: 200px;
+    width: 80%;
+  }
   #about-right{
     white-space: normal;
     display: inline-block;
@@ -64,7 +63,7 @@ export default {
     transition: all 0.1s ease-in-out;
   }
   #about-right a{
-    background-color: rgba(255, 89, 100, 0.4);
+    background-color: rgba(0, 168, 255, 0.4);
     text-decoration: none;
     color: #222;
     padding: 0.15em 0.3em;
@@ -72,7 +71,7 @@ export default {
   #about-right a:hover{
     cursor: pointer;
     cursor: hand;
-    border-bottom: 4px solid #FF5964;
+    border-bottom: 4px solid #00a8ff;
   }
   @media only screen and (max-width: 780px){
     #about-right{

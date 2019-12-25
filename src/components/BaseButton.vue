@@ -49,8 +49,8 @@ button{
 button:hover{
   cursor: pointer;
   cursor: hand;
-  background-color: #FF5964;
-  border-color: #FF5964;
+  background-color: #00a8ff;
+  border-color: #00a8ff;
 }
 .black button{
   border-color: #222;
@@ -67,7 +67,7 @@ button:hover{
   border-color: #737373;
 }
 .black button:hover{
-  border-color: #FF5964;
+  border-color: #00a8ff;
   color: #fefefe;
 }
 .white button{
@@ -80,7 +80,7 @@ button:hover{
 .white button:hover{
   border-color: #fefefe;
   background-color: #fefefe;
-  color: #FF5964;
+  color: #00a8ff;
 }
 @media only screen and (max-width: 780px){
   .mobile button{

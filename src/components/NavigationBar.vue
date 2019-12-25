@@ -110,7 +110,7 @@ export default {
   top: 0px;
   z-index: 999;
   width: 100%;
-  background-color: #FF5964;
+  background-color: #2f3640;
   margin: 0em;
   padding: 1em 0em;
 }
@@ -125,7 +125,7 @@ export default {
   color: #222 !important;
 }
 .scroll #nav-container .element a:hover{
-  color: #FF5964 !important;
+  color: #00a8ff !important;
 }
 .scroll #nav-container{
   margin: 0em 20% !important;
@@ -149,7 +149,7 @@ export default {
   text-decoration: none;
 }
 #nav-bar #nav-container .element a:hover{
-  color: #222;
+  color: #00a8ff;
   cursor: pointer;
   cursor: hand;
 }
@@ -170,7 +170,7 @@ a {
 }
 
 .hamburger div {
-  background-color: #FF5964;
+  background-color: #2f3640;
   position: relative;
   margin: 7px auto 0;
   width: 40px;
@@ -261,7 +261,7 @@ a {
 
 .link:hover {
   background-color: #fff;
-  color: rgb(61, 61, 61);
+  color: #00a8ff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }

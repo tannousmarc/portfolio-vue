@@ -124,7 +124,7 @@ export default {
 <style scoped>
 .homepage-project{
   background-size: cover;
-  height: 420px;
+  height: 280px;
   position: relative;
 }
 .homepage-project h1,pre{

@@ -216,15 +216,29 @@ export default {
 }
 a{
   text-decoration: none;
+  width: 100%;
 }
 .experiment{
+  display: inline-block;
   background-color: #FEFEFE;
   text-align: left;
-  padding: 4em 3em;
   margin-bottom: 1em;
   box-shadow: 0px 3px 3px rgba(0,0,0,0.10);
   border: 20px solid #FEFEFE;
   transition: all 0.15s ease-in-out;
+  width: 40%;
+  padding: 0px;
+}
+a::before{
+  content: "";
+  height: 10em;
+  width: 55%;
+  padding: 0px;
+  margin: 0px;
+  float: left;
+  background-color: red;
+  display: inline-block;
+  
 }
 .experiment:hover{
   cursor: pointer;

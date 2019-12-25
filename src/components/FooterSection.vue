@@ -1,11 +1,10 @@
 <template>
 <div id = "footer">
-  <a href = "http://www.github.com/tannousmarc"><img src = "../assets/social-media/github.png" /></a>
-  <a href = "http://www.instagram.com/marcanache"><img src = "../assets/social-media/instagram.png" /></a>
-  <a href = "https://www.linkedin.com/in/marctannous/"><img src = "../assets/social-media/linkedin.png" /></a>
-  <div id = "trademark">
-    Copyright Marc Tannous {{ new Date().getFullYear() }}
-  </div>
+  Find me on
+  <a href = "http://www.github.com/tannousmarc">github</a> ,
+  <a href = "http://www.twitter.com/marcanache">twitter</a> ,
+  <a href = "http://www.instagram.com/marcanache">instagram</a> , and
+  <a href = "https://www.linkedin.com/in/marctannous/">linkedin</a>.
 </div>
 </template>
 
@@ -24,9 +23,9 @@ export default {
 
 <style scoped>
   #footer {
-    background-color: #222;
+    background-color: #2f3640;
     color: #fefefe;
-    padding: 2em 0 5em;
+    padding: 2em 0;
     position: relative;
     float: bottom;
   }
@@ -49,14 +48,18 @@ export default {
     margin: 0;
     padding: 0;
   }
-  #footer #trademark{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    background-color: #FF5964;
-    padding: 1em 0;
-    font-size: 1em;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
+  #footer *{
+    transition: all 0.15s ease-in-out;
+  }
+  #footer a{
+    background-color: rgba(0, 168, 255, 0.4);
+    text-decoration: none;
+    color: #fefefe;
+    padding: 0.15em 0.3em;
+  }
+  #footer a:hover{
+    cursor: pointer;
+    cursor: hand;
+    border-bottom: 4px solid #00a8ff;
   }
 </style>

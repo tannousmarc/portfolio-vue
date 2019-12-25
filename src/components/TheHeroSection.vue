@@ -12,7 +12,7 @@
 <style scoped>
 #hero{
   width: 100%;
-  background-color: #FF5964;
+  background-color: #2f3640;
   padding: 14em 0 0 0;
   top: 0;
   z-index: 0;
@@ -88,7 +88,7 @@ export default {
     return {
       tags: ['designer', 'developer'],
       title: 'I\'m Marc, a ',
-      subtitle: 'based in London, UK.'
+      subtitle: 'working for Palantir.'
     }
   },
   mounted: function () {
@@ -1533,7 +1533,7 @@ camera.position = {
 camera.rotation.x = -0.4;
 
 // fog hides the fact that our mesh does not, in fact, stretch infinitely on the Z axis
-scene.fog = new THREE.Fog(0xFF5964, 5, 18);
+scene.fog = new THREE.Fog(0x2f3640, 5, 18);
 scene.add( new THREE.AmbientLight( 0xffffff ) );
 
 const heightMap	= THREEx.Terrain.allocateHeightMap(320,256);
